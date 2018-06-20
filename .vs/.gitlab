@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 206,
+    "Username": "CuteLad",
+    "Name": "JPC",
+    "Email": "2985578957@qq.com",
+    "AvatarUrl": "https://secure.gravatar.com/avatar/b1df19ec2fcf9af56c32ccee35fc1bc8?s=80&d=identicon",
+    "PrivateToken": "e0711bf44167631045d55887340aae728c100bfd2dd37a944db4172c6276b339",
+    "Host": "https://gitclub.cn",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}
