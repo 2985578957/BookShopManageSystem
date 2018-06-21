@@ -36,17 +36,17 @@ namespace 书店销售管理系统.Interface
         {
             if (zengjiadao_textbox.Enabled == true)
             {
-                if (!CheckString.CheckUInt(zengjiadao_textbox.Text))
+                if (!CheckString.CheckUInt(zengjiadao_textbox.Text.Trim()))
                     MessageBox.Show("请检查修改数量是否填写正确", "数量填写错误");
                 else
-                    Connector.Replenishment(1, isbn_textbox.Text, int.Parse(zengjiadao_textbox.Text));
+                    Connector.Replenishment(1, isbn_textbox.Text.Trim(), int.Parse(zengjiadao_textbox.Text.Trim()));
             }
             else
             {
-                if (!CheckString.CheckUInt(zengjia_textbox.Text))
+                if (!CheckString.CheckUInt(zengjia_textbox.Text.Trim()))
                     MessageBox.Show("请检查增加数量是否填写正确", "数量填写错误");
                 else
-                    Connector.Replenishment(2, isbn_textbox.Text, int.Parse(zengjia_textbox.Text));
+                    Connector.Replenishment(2, isbn_textbox.Text.Trim(), int.Parse(zengjia_textbox.Text.Trim()));
             }
         }
     }

@@ -55,7 +55,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(700, 119);
+            this.label9.Location = new System.Drawing.Point(775, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 15);
             this.label9.TabIndex = 45;
@@ -65,9 +65,9 @@
             // 
             this.addcc_listbox.FormattingEnabled = true;
             this.addcc_listbox.ItemHeight = 15;
-            this.addcc_listbox.Location = new System.Drawing.Point(668, 145);
+            this.addcc_listbox.Location = new System.Drawing.Point(703, 115);
             this.addcc_listbox.Name = "addcc_listbox";
-            this.addcc_listbox.Size = new System.Drawing.Size(120, 259);
+            this.addcc_listbox.Size = new System.Drawing.Size(211, 289);
             this.addcc_listbox.TabIndex = 41;
             // 
             // receiver_textbox
@@ -75,7 +75,7 @@
             this.receiver_textbox.Location = new System.Drawing.Point(70, 55);
             this.receiver_textbox.Name = "receiver_textbox";
             this.receiver_textbox.ReadOnly = true;
-            this.receiver_textbox.Size = new System.Drawing.Size(366, 25);
+            this.receiver_textbox.Size = new System.Drawing.Size(428, 25);
             this.receiver_textbox.TabIndex = 40;
             this.receiver_textbox.Text = "1998jiangpengcheng@163.com";
             // 
@@ -92,7 +92,7 @@
             // 
             this.showname_textbox.Location = new System.Drawing.Point(336, 86);
             this.showname_textbox.Name = "showname_textbox";
-            this.showname_textbox.Size = new System.Drawing.Size(100, 25);
+            this.showname_textbox.Size = new System.Drawing.Size(162, 25);
             this.showname_textbox.TabIndex = 38;
             // 
             // label6
@@ -131,9 +131,9 @@
             // 
             // attach_button
             // 
-            this.attach_button.Location = new System.Drawing.Point(668, 410);
+            this.attach_button.Location = new System.Drawing.Point(703, 410);
             this.attach_button.Name = "attach_button";
-            this.attach_button.Size = new System.Drawing.Size(120, 64);
+            this.attach_button.Size = new System.Drawing.Size(211, 64);
             this.attach_button.TabIndex = 33;
             this.attach_button.Text = "添加附件";
             this.attach_button.UseVisualStyleBackColor = true;
@@ -145,14 +145,14 @@
             this.attach_listbox.ItemHeight = 15;
             this.attach_listbox.Location = new System.Drawing.Point(52, 410);
             this.attach_listbox.Name = "attach_listbox";
-            this.attach_listbox.Size = new System.Drawing.Size(610, 64);
+            this.attach_listbox.Size = new System.Drawing.Size(645, 64);
             this.attach_listbox.TabIndex = 32;
             // 
             // send_button
             // 
             this.send_button.Location = new System.Drawing.Point(12, 485);
             this.send_button.Name = "send_button";
-            this.send_button.Size = new System.Drawing.Size(776, 46);
+            this.send_button.Size = new System.Drawing.Size(902, 46);
             this.send_button.TabIndex = 31;
             this.send_button.Text = "发送";
             this.send_button.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 58);
+            this.label3.Location = new System.Drawing.Point(504, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 30;
@@ -191,7 +191,7 @@
             this.useSSL_checkbox.Checked = true;
             this.useSSL_checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.useSSL_checkbox.Enabled = false;
-            this.useSSL_checkbox.Location = new System.Drawing.Point(703, 57);
+            this.useSSL_checkbox.Location = new System.Drawing.Point(829, 57);
             this.useSSL_checkbox.Name = "useSSL_checkbox";
             this.useSSL_checkbox.Size = new System.Drawing.Size(85, 19);
             this.useSSL_checkbox.TabIndex = 27;
@@ -200,10 +200,10 @@
             // 
             // server_textbox
             // 
-            this.server_textbox.Location = new System.Drawing.Point(551, 55);
+            this.server_textbox.Location = new System.Drawing.Point(609, 55);
             this.server_textbox.Name = "server_textbox";
             this.server_textbox.ReadOnly = true;
-            this.server_textbox.Size = new System.Drawing.Size(146, 25);
+            this.server_textbox.Size = new System.Drawing.Size(195, 25);
             this.server_textbox.TabIndex = 26;
             this.server_textbox.Text = "smtp.163.com";
             // 
@@ -213,7 +213,7 @@
             this.pwd_textbox.Name = "pwd_textbox";
             this.pwd_textbox.PasswordChar = '*';
             this.pwd_textbox.ReadOnly = true;
-            this.pwd_textbox.Size = new System.Drawing.Size(211, 25);
+            this.pwd_textbox.Size = new System.Drawing.Size(337, 25);
             this.pwd_textbox.TabIndex = 25;
             this.pwd_textbox.Text = "1998jpch";
             // 
@@ -231,7 +231,7 @@
             this.msg_textbox.Location = new System.Drawing.Point(12, 116);
             this.msg_textbox.Multiline = true;
             this.msg_textbox.Name = "msg_textbox";
-            this.msg_textbox.Size = new System.Drawing.Size(650, 288);
+            this.msg_textbox.Size = new System.Drawing.Size(685, 288);
             this.msg_textbox.TabIndex = 23;
             // 
             // checkBox1
@@ -240,7 +240,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("宋体", 15F);
-            this.checkBox1.Location = new System.Drawing.Point(519, 82);
+            this.checkBox1.Location = new System.Drawing.Point(534, 81);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(134, 29);
             this.checkBox1.TabIndex = 46;
@@ -252,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 538);
+            this.ClientSize = new System.Drawing.Size(929, 538);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.addcc_listbox);

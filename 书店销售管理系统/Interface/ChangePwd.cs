@@ -14,7 +14,7 @@ namespace 书店销售管理系统.Interface
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
-            if (!Object.Equals(newpwd_textbox.Text, confimnewpwd_textbox.Text)){
+            if (!Object.Equals(newpwd_textbox.Text.Trim(), confimnewpwd_textbox.Text.Trim())){
                 MessageBox.Show("原密码与新密码不符","修改密码失败");
             }
             else {
@@ -22,8 +22,8 @@ namespace 书店销售管理系统.Interface
                 DialogResult dr = MessageBox.Show("确定?", "确认", messButton);
                 if (dr == DialogResult.OK)//如果点击“确定”按钮
                 {
-                    String oldpwd_sha1 = SecurityUnit.EncryptToSHA1(oldpwd_textbox.Text);
-                    String newpwd_sha1 = SecurityUnit.EncryptToSHA1(newpwd_textbox.Text);
+                    String oldpwd_sha1 = SecurityUnit.EncryptToSHA1(oldpwd_textbox.Text.Trim());
+                    String newpwd_sha1 = SecurityUnit.EncryptToSHA1(newpwd_textbox.Text.Trim());
                     Connector.ChangeAdminPwd(oldpwd_sha1, newpwd_sha1);
                     this.Dispose();
                     this.Close();

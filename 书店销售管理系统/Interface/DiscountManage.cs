@@ -21,12 +21,12 @@ namespace 书店销售管理系统.Interface
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
-            if (!CheckString.CheckUDouble(textBox1.Text) || !(Double.Parse(textBox1.Text) > 0 && (Double.Parse(textBox1.Text) <= 1)))
+            if (!CheckString.CheckUDouble(textBox1.Text.Trim()) || !(Double.Parse(textBox1.Text.Trim()) > 0 && (Double.Parse(textBox1.Text.Trim()) <= 1)))
             {
                 MessageBox.Show("请检查折扣是否为0-1的小数", "折扣填写错误");
             }
             else
-                Connector.ChangeDiscount(level, textBox1.Text);
+                Connector.ChangeDiscount(level, textBox1.Text.Trim());
         }
 
         private void radioButton0_CheckedChanged(object sender, EventArgs e)

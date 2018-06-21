@@ -47,6 +47,7 @@
             this.会员管理ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.折扣管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.获取信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.发送优惠信息邮件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看销售列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.收入统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,7 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.发送优惠信息邮件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看会员总消费金额ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,6 +182,7 @@
             this.会员管理ToolStripMenuItem1,
             this.折扣管理ToolStripMenuItem,
             this.获取信息ToolStripMenuItem,
+            this.查看会员总消费金额ToolStripMenuItem,
             this.发送优惠信息邮件ToolStripMenuItem});
             this.会员管理ToolStripMenuItem.Name = "会员管理ToolStripMenuItem";
             this.会员管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
@@ -189,23 +191,30 @@
             // 会员管理ToolStripMenuItem1
             // 
             this.会员管理ToolStripMenuItem1.Name = "会员管理ToolStripMenuItem1";
-            this.会员管理ToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.会员管理ToolStripMenuItem1.Size = new System.Drawing.Size(219, 26);
             this.会员管理ToolStripMenuItem1.Text = "会员管理";
             this.会员管理ToolStripMenuItem1.Click += new System.EventHandler(this.会员管理ToolStripMenuItem1_Click);
             // 
             // 折扣管理ToolStripMenuItem
             // 
             this.折扣管理ToolStripMenuItem.Name = "折扣管理ToolStripMenuItem";
-            this.折扣管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.折扣管理ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.折扣管理ToolStripMenuItem.Text = "折扣管理";
             this.折扣管理ToolStripMenuItem.Click += new System.EventHandler(this.折扣管理ToolStripMenuItem_Click);
             // 
             // 获取信息ToolStripMenuItem
             // 
             this.获取信息ToolStripMenuItem.Name = "获取信息ToolStripMenuItem";
-            this.获取信息ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.获取信息ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.获取信息ToolStripMenuItem.Text = "获取全部信息";
             this.获取信息ToolStripMenuItem.Click += new System.EventHandler(this.获取会员信息ToolStripMenuItem_Click);
+            // 
+            // 发送优惠信息邮件ToolStripMenuItem
+            // 
+            this.发送优惠信息邮件ToolStripMenuItem.Name = "发送优惠信息邮件ToolStripMenuItem";
+            this.发送优惠信息邮件ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.发送优惠信息邮件ToolStripMenuItem.Text = "发送优惠信息邮件";
+            this.发送优惠信息邮件ToolStripMenuItem.Click += new System.EventHandler(this.发送优惠信息邮件ToolStripMenuItem_Click);
             // 
             // 数据统计ToolStripMenuItem
             // 
@@ -269,12 +278,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "登入系统身份为：";
             // 
-            // 发送优惠信息邮件ToolStripMenuItem
+            // 查看会员总消费金额ToolStripMenuItem
             // 
-            this.发送优惠信息邮件ToolStripMenuItem.Name = "发送优惠信息邮件ToolStripMenuItem";
-            this.发送优惠信息邮件ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.发送优惠信息邮件ToolStripMenuItem.Text = "发送优惠信息邮件";
-            this.发送优惠信息邮件ToolStripMenuItem.Click += new System.EventHandler(this.发送优惠信息邮件ToolStripMenuItem_Click);
+            this.查看会员总消费金额ToolStripMenuItem.Name = "查看会员总消费金额ToolStripMenuItem";
+            this.查看会员总消费金额ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.查看会员总消费金额ToolStripMenuItem.Text = "查看会员总消费金额";
+            this.查看会员总消费金额ToolStripMenuItem.Click += new System.EventHandler(this.查看会员总消费金额ToolStripMenuItem_Click);
             // 
             // Main_Page
             // 
@@ -326,5 +335,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem 添加系统用户ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 发送优惠信息邮件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 查看会员总消费金额ToolStripMenuItem;
     }
 }

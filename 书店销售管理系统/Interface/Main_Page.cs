@@ -18,6 +18,7 @@ namespace 书店销售管理系统.Interface
                 进货ToolStripMenuItem.Enabled = false;
                 补货ToolStripMenuItem.Enabled = false;
                 会员管理ToolStripMenuItem1.Enabled = false;
+                发送优惠信息邮件ToolStripMenuItem.Enabled = false;
                 添加系统用户ToolStripMenuItem.Enabled = false;
 
                 执行SQL语句ToolStripMenuItem.Visible = false;
@@ -26,6 +27,7 @@ namespace 书店销售管理系统.Interface
                 进货ToolStripMenuItem.Visible = false;
                 补货ToolStripMenuItem.Visible = false;
                 会员管理ToolStripMenuItem1.Visible = false;
+                发送优惠信息邮件ToolStripMenuItem.Visible = false;
                 添加系统用户ToolStripMenuItem.Visible = false;
             }
             else if (LoginInfo.Power.Equals("进货员"))
@@ -33,6 +35,7 @@ namespace 书店销售管理系统.Interface
                 记账ToolStripMenuItem.Enabled = false;
                 会员管理ToolStripMenuItem.Enabled = false;
                 会员管理ToolStripMenuItem1.Enabled = false;
+                发送优惠信息邮件ToolStripMenuItem.Enabled = false;
                 折扣管理ToolStripMenuItem.Enabled = false;
                 获取信息ToolStripMenuItem.Enabled = false;
                 添加系统用户ToolStripMenuItem.Enabled = false;
@@ -40,6 +43,7 @@ namespace 书店销售管理系统.Interface
                 记账ToolStripMenuItem.Visible = false;
                 会员管理ToolStripMenuItem.Visible = false;
                 会员管理ToolStripMenuItem1.Visible = false;
+                发送优惠信息邮件ToolStripMenuItem.Visible = false;
                 折扣管理ToolStripMenuItem.Visible = false;
                 获取信息ToolStripMenuItem.Visible = false;
                 添加系统用户ToolStripMenuItem.Visible = false;
@@ -156,6 +160,12 @@ namespace 书店销售管理系统.Interface
         private void 发送优惠信息邮件ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SendDiscountEmails newpage = new SendDiscountEmails();
+            newpage.Show();
+        }
+
+        private void 查看会员总消费金额ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VipSumBuy newpage = new VipSumBuy();
             newpage.Show();
         }
     }

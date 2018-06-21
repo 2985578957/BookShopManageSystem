@@ -25,6 +25,13 @@ namespace 书店销售管理系统.DBConnector
                 ADOConnector.SetArgs(name, user, pwd);
         }
 
+        public static DataSet SelectVipSumBuy(string vipnum)
+        {
+            if (mode == 0)
+                return ODBCConnector.SelectVipSumBuy(vipnum);
+            else//mode==1
+                return ADOConnector.SelectVipSumBuy(vipnum);
+        }
 
         public static bool TestConn(string name, string user, string pwd)
         {

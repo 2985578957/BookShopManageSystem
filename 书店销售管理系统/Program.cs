@@ -14,11 +14,9 @@ namespace 书店销售管理系统
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login_Page());
 
             Login_Page login = new Login_Page();
 
-            //界面转换  
             login.ShowDialog();
 
             if (login.DialogResult == DialogResult.OK)

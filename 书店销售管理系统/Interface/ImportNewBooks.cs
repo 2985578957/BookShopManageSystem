@@ -14,15 +14,15 @@ namespace 书店销售管理系统.Interface
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
-            if (CheckString.CheckISBN(isbn_textbox.Text) && CheckString.CheckUDouble(money_textbox.Text)&& double.Parse(money_textbox.Text)>0)
+            if (CheckString.CheckISBN(isbn_textbox.Text.Trim()) && CheckString.CheckUDouble(money_textbox.Text.Trim()) && double.Parse(money_textbox.Text.Trim()) >0)
             {
-                String ISBN = isbn_textbox.Text;
-                String bookname = bookname_textbox.Text;
-                String authorname = author_textbox.Text;
-                String publishname = publish_textbok.Text;
-                String classificationname = classification_textbox.Text;
-                double money = double.Parse(money_textbox.Text);
-                String remarks = remarks_textbox.Text;
+                String ISBN = isbn_textbox.Text.Trim();
+                String bookname = bookname_textbox.Text.Trim();
+                String authorname = author_textbox.Text.Trim();
+                String publishname = publish_textbok.Text.Trim();
+                String classificationname = classification_textbox.Text.Trim();
+                double money = double.Parse(money_textbox.Text.Trim());
+                String remarks = remarks_textbox.Text.Trim();
 
                 MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                 DialogResult dr = MessageBox.Show("确定?", "确认", messButton);
@@ -41,9 +41,9 @@ namespace 书店销售管理系统.Interface
                         = remarks_textbox.Text = "";
                 }
             }
-            else if (!CheckString.CheckISBN(isbn_textbox.Text))
+            else if (!CheckString.CheckISBN(isbn_textbox.Text.Trim()))
                 MessageBox.Show("请检查ISBN填写是否正确", "ISBN格式错误");
-            else if(!CheckString.CheckUDouble(money_textbox.Text)|| double.Parse(money_textbox.Text)==0)
+            else if(!CheckString.CheckUDouble(money_textbox.Text.Trim()) || double.Parse(money_textbox.Text.Trim()) ==0)
                 MessageBox.Show("请检查价格填写是否正确", "价格填写错误");
         }
     }

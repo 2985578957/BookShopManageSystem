@@ -25,6 +25,29 @@ namespace 书店销售管理系统.DBConnector
             set { _SqlUserName = value; }
         }
 
+        public static DataSet SelectVipSumBuy(string vipnum)
+        {
+            try
+            {
+                string SqlStr = "SELECT 交易人编号,SUM(收款金额) AS 总消费金额 FROM SellList WHERE 交易人编号<>0 AND 交易人编号 LIKE '" + vipnum+"'  GROUP BY 交易人编号";
+                odbcCon.Open();
+                OdbcDataAdapter odbcAdapter = new OdbcDataAdapter(SqlStr, odbcCon);
+                DataSet ds = new DataSet();
+
+                odbcAdapter.Fill(ds);
+                return ds;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                odbcCon.Close();
+            }
+            return null;
+        }
+
         public static string SqlPwd
         {
             get { return _SqlPwd; }

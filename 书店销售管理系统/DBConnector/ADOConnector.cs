@@ -40,6 +40,29 @@ namespace 书店销售管理系统.DBConnector
             ConStr = "Data Source=localhost,1433;database=" + DBName + ";User id=" + SqlUserName + "; PWD=" + SqlPwd;
         }
 
+        public static DataSet SelectVipSumBuy(string vipnum)
+        {
+            try
+            {
+                string SqlStr = "SELECT 交易人编号,SUM(收款金额) AS 总消费金额 FROM SellList WHERE 交易人编号<>0 AND 交易人编号 LIKE '" + vipnum + "'  GROUP BY 交易人编号";
+                adoCon.Open();
+                SqlDataAdapter odbcAdapter = new SqlDataAdapter(SqlStr, adoCon);
+                DataSet ds = new DataSet();
+
+                odbcAdapter.Fill(ds);
+                return ds;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                adoCon.Close();
+            }
+            return null;
+        }
+
         public static void AddNewSysUser(string name, string pwd, string power)
         {
             try

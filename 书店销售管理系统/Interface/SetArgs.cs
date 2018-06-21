@@ -14,9 +14,9 @@ namespace 书店销售管理系统.Interface
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
-            String name = name_textbox.Text;
-            String user = user_textbox.Text;
-            String pwd = pwd_textbox.Text;
+            String name = name_textbox.Text.Trim();
+            String user = user_textbox.Text.Trim();
+            String pwd = pwd_textbox.Text.Trim();
 
             if (Object.Equals(name, "") || Object.Equals(user, "") || Object.Equals(pwd, ""))
             {

@@ -92,10 +92,10 @@ namespace 书店销售管理系统.Interface
         }
         private void submit_Click(object sender, EventArgs e)
         {
-            String pwd_sha1 = SecurityUnit.EncryptToSHA1(pwd_textbox.Text);
+            String pwd_sha1 = SecurityUnit.EncryptToSHA1(pwd_textbox.Text.Trim());
             if (mode == 1)
             {
-                Connector.AddNewVip(num_textbox.Text, name_textbox.Text, pwd_sha1, phone_textbox.Text, mail_textbox.Text);
+                Connector.AddNewVip(num_textbox.Text.Trim(), name_textbox.Text.Trim(), pwd_sha1, phone_textbox.Text.Trim(), mail_textbox.Text.Trim());
                 num_textbox.Text = Connector.GetNewVipNum();
                 this.dataGridView1.DataSource = Connector.SelectVipTTable().Tables[0].DefaultView;
                 name_textbox.Text = "";
@@ -105,15 +105,15 @@ namespace 书店销售管理系统.Interface
             }
             else if (mode == 2)
             {
-                if (!CheckString.CheckUInt(num_textbox.Text))
+                if (!CheckString.CheckUInt(num_textbox.Text.Trim()))
                     MessageBox.Show("编号填写错误", "编号错误");
                 else
                 {
-                    Connector.UpgradeVipLevel(num_textbox.Text);
+                    Connector.UpgradeVipLevel(num_textbox.Text.Trim());
                     this.dataGridView1.DataSource = Connector.SelectVipTTable().Tables[0].DefaultView;
                     for (int i = 0; i < dt.Rows[0].ItemArray.Length; i++)
                     {
-                        if (dt.Rows[i].ItemArray[0].ToString().Equals(num_textbox.Text))
+                        if (dt.Rows[i].ItemArray[0].ToString().Equals(num_textbox.Text.Trim()))
                         {
                             name_textbox.Text = dt.Rows[i].ItemArray[1].ToString();
                             pwd_textbox.Text = dt.Rows[i].ItemArray[2].ToString();
@@ -128,20 +128,20 @@ namespace 书店销售管理系统.Interface
             }
             else if (mode == 3)
             {
-                Connector.ChangeVipInfo(num_textbox.Text, name_textbox.Text, pwd_sha1, phone_textbox.Text, mail_textbox.Text);
+                Connector.ChangeVipInfo(num_textbox.Text.Trim(), name_textbox.Text.Trim(), pwd_sha1, phone_textbox.Text.Trim(), mail_textbox.Text.Trim());
                 this.dataGridView1.DataSource = Connector.SelectVipTTable().Tables[0].DefaultView;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!CheckString.CheckUInt(num_textbox.Text))
+            if (!CheckString.CheckUInt(num_textbox.Text.Trim()))
                 MessageBox.Show("编号填写错误","编号错误");
             else
             {
                 for (int i = 0; i < dt.Rows[0].ItemArray.Length; i++)
                 {
-                    if (dt.Rows[i].ItemArray[0].ToString().Equals(num_textbox.Text))
+                    if (dt.Rows[i].ItemArray[0].ToString().Equals(num_textbox.Text.Trim()))
                     {
                         name_textbox.Text = dt.Rows[i].ItemArray[1].ToString();
                         pwd_textbox.Text = dt.Rows[i].ItemArray[2].ToString();

@@ -17,8 +17,8 @@ namespace 书店销售管理系统.Interface
 
             String name;
             String pwd_sha1;
-            name = AdminName_TextBox.Text;
-            pwd_sha1 = SecurityUnit.EncryptToSHA1(AdminPwd_TextBox.Text);
+            name = AdminName_TextBox.Text.Trim();
+            pwd_sha1 = SecurityUnit.EncryptToSHA1(AdminPwd_TextBox.Text.Trim());
             if(Object.Equals(pwd_sha1, Connector.Get_Pwd(name)))
             {
                 MessageBox.Show("登陆成功");

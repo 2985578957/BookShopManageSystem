@@ -24,25 +24,25 @@ namespace 书店销售管理系统.Interface
             }
             else if (radioButton1.Checked)
             {
-                str = textBox1.Text;
+                str = textBox1.Text.Trim();
                 ds = Connector.SelectBookInfoTable(1, str);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
             }
             else if (radioButton2.Checked)
             {
-                str = textBox2.Text;
+                str = textBox2.Text.Trim();
                 ds = Connector.SelectBookInfoTable(2, str);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
             }
             else if (radioButton3.Checked)
             {
-                str = textBox3.Text;
+                str = textBox3.Text.Trim();
                 ds = Connector.SelectBookInfoTable(3, str);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
             }
             else if (radioButton4.Checked)
             {
-                str = textBox4.Text;
+                str = textBox4.Text.Trim();
                 ds = Connector.SelectBookInfoTable(4, str);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
             }

@@ -14,64 +14,64 @@ namespace 书店销售管理系统.Interface
 
         private void SubmitSell(object sender, EventArgs e)
         {
-            if (!CheckString.CheckISBN(isbn_textbox.Text))
+            if (!CheckString.CheckISBN(isbn_textbox.Text.Trim()))
                 MessageBox.Show("请检查ISBN填写是否正确", "ISBN格式错误");
-            else if (!CheckString.CheckUInt(num_textbox.Text) || int.Parse(num_textbox.Text) == 0)
+            else if (!CheckString.CheckUInt(num_textbox.Text.Trim()) || int.Parse(num_textbox.Text.Trim()) == 0)
                 MessageBox.Show("请检查数量填写是否正确", "数量错误");
             else
             {
-                money_textbox.Text = (double.Parse(Connector.GetPrice(isbn_textbox.Text)) * int.Parse(num_textbox.Text)).ToString();
+                money_textbox.Text = (double.Parse(Connector.GetPrice(isbn_textbox.Text.Trim())) * int.Parse(num_textbox.Text.Trim())).ToString();
 
-                String ISBN = isbn_textbox.Text;
-                int num = int.Parse(num_textbox.Text);
-                String TranMode = mode_textbox.Text;
-                String Remarks = remarks_textbox.Text;
+                String ISBN = isbn_textbox.Text.Trim();
+                int num = int.Parse(num_textbox.Text.Trim());
+                String TranMode = mode_textbox.Text.Trim();
+                String Remarks = remarks_textbox.Text.Trim();
 
                 
 
                 Int64 VipNum;
                 String time;
-                double money=Double.Parse(money_textbox.Text);
+                double money=Double.Parse(money_textbox.Text.Trim());
                 bool flag = true;
 
-                if (Object.Equals(vipnum_textbox.Text, ""))
+                if (Object.Equals(vipnum_textbox.Text.Trim(), ""))
                 {
                     vipnum_textbox.Text = "0";
                     VipNum = 0;
                 }
                 else
                 {
-                    if (!CheckString.CheckUInt(vipnum_textbox.Text))
+                    if (!CheckString.CheckUInt(vipnum_textbox.Text.Trim()))
                     {
                         MessageBox.Show("会员编号填写错误", "会员编号错误");
                         VipNum = 0;
                         flag = false;
                     }
                     else
-                        VipNum = Int64.Parse(vipnum_textbox.Text);
+                        VipNum = Int64.Parse(vipnum_textbox.Text.Trim());
                 }
 
-                if (Object.Equals(time_textbox.Text, ""))
+                if (Object.Equals(time_textbox.Text.Trim(), ""))
                 {
                     time_textbox.Text = string.Format("{0:G}", DateTime.Now);
                     time = string.Format("{0:G}", System.DateTime.Now);
                 }
                 else
                 {
-                    if (!CheckString.CheckDate(time_textbox.Text))
+                    if (!CheckString.CheckDate(time_textbox.Text.Trim()))
                     {
                         MessageBox.Show("交易时间填写错误", "时间格式错误");
                         flag = false;
                         time = string.Format("{0:G}", System.DateTime.Now);
                     }
                     else
-                        time = time_textbox.Text;
+                        time = time_textbox.Text.Trim();
                 }
 
                 if (flag)
                 {
                     trannum_textbox.Text = SecurityUnit.EncryptToMD5(VipNum + ISBN + time + TranMode);
-                    String TranNum = trannum_textbox.Text;
+                    String TranNum = trannum_textbox.Text.Trim();
 
                     MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                     DialogResult dr = MessageBox.Show("确定?", "确认订单", messButton);

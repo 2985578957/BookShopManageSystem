@@ -30,9 +30,9 @@ namespace 书店销售管理系统.Interface
 
         private void send_button_Click(object sender, EventArgs e)
         {
-            string host = server_textbox.Text;
-            string userName = name_textbox.Text;
-            string password = pwd_textbox.Text;
+            string host = server_textbox.Text.Trim();
+            string userName = name_textbox.Text.Trim();
+            string password = pwd_textbox.Text.Trim();
 
             SmtpClient client = new SmtpClient();
             client.DeliveryMethod = SmtpDeliveryMethod.Network;//指定电子邮件发送方式    
@@ -43,7 +43,7 @@ namespace 书店销售管理系统.Interface
 
             //////////////////////////////////////
             string strfrom = userName;
-            string strto = receiver_textbox.Text;
+            string strto = receiver_textbox.Text.Trim();
 
 
             string subject = title_textbox.Text;//邮件的主题             
@@ -62,9 +62,12 @@ namespace 书店销售管理系统.Interface
             {
                 client.Send(msg);
                 MessageBox.Show("发送成功", "发送成功");
-                msg = new MailMessage();
+                
                 attach_listbox.Items.Clear();
                 addcc_listbox.Items.Clear();
+
+                msg = new MailMessage();
+                AddCC();
             }
             catch (SmtpException ex)
             {
