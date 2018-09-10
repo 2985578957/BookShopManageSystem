@@ -23,25 +23,6 @@ namespace 书店销售管理系统.Assembly
             return reg1.IsMatch(str);
         }
 
-        static public bool CheckInt(string str)
-        {
-            Regex reg1 = new Regex(@"^[+-]?[1-9]\d*$|^[+-]?0$");
-            return reg1.IsMatch(str);
-        }
-
-        static public bool CheckDouble(string str)
-        {
-            Regex x = new Regex(@"^[+-]?[1-9]\d*(\.\d+)?$|^[+-]?0(\.\d+)?$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-            return x.Match(str).Success;
-        }
-
-        static public bool CheckTime(string str)
-        {
-            //2018 - 05 - 31 14:41:35.000
-            Regex x = new Regex(@"^\d\d\d\d-1?\d-[123]?\d \d\d:\d\d:\d\d\.\d\d\d$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-            return x.Match(str).Success;
-        }
-
         static public bool CheckDate(string strDate)
         {
             try

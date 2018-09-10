@@ -14,23 +14,27 @@ namespace 书店销售管理系统.Interface
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-
-            String name;
-            String pwd_sha1;
-            name = AdminName_TextBox.Text.Trim();
-            pwd_sha1 = SecurityUnit.EncryptToSHA1(AdminPwd_TextBox.Text.Trim());
-            if(Object.Equals(pwd_sha1, Connector.Get_Pwd(name)))
-            {
-                MessageBox.Show("登陆成功");
-                LoginInfo.LoginName = name;
-                LoginInfo.Power = Connector.GetPower(name);
-                this.DialogResult = DialogResult.OK;
-                this.Dispose();
-                this.Close();
-            }
+            if (AdminName_TextBox.Text.Trim().Equals("") || AdminPwd_TextBox.Text.Trim().Equals(""))
+                MessageBox.Show("用户名密码均不为空！");
             else
             {
-                MessageBox.Show("密码错误");
+                String name;
+                String pwd_sha1;
+                name = AdminName_TextBox.Text.Trim();
+                pwd_sha1 = SecurityUnit.EncryptToSHA1(AdminPwd_TextBox.Text.Trim());
+                if (Object.Equals(pwd_sha1, Connector.Get_Pwd(name)))
+                {
+                    MessageBox.Show("登陆成功");
+                    LoginInfo.LoginName = name;
+                    LoginInfo.Power = Connector.GetPower(name);
+                    this.DialogResult = DialogResult.OK;
+                    this.Dispose();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("密码错误");
+                }
             }
         }
 

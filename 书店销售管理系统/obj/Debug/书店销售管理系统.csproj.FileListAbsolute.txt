@@ -85,3 +85,4 @@ C:\Users\29855\Desktop\书店销售管理系统\书店销售管理系统\obj\Deb
 C:\Users\29855\Desktop\书店销售管理系统\书店销售管理系统\obj\Debug\书店销售管理系统.Interface.ShowAllSysUser.resources
 C:\Users\29855\Desktop\书店销售管理系统\书店销售管理系统\obj\Debug\书店销售管理系统.Interface.VipManage.resources
 C:\Users\29855\Desktop\书店销售管理系统\书店销售管理系统\obj\Debug\书店销售管理系统.Interface.VipSumBuy.resources
+C:\Users\29855\Desktop\书店销售管理系统\书店销售管理系统\obj\Debug\书店销售管理系统.csprojAssemblyReference.cache
