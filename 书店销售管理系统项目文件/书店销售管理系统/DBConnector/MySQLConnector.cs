@@ -1,17 +1,6 @@
-﻿using Microsoft.Analytics.Interfaces;
-using Microsoft.Analytics.Types.Sql;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System;
-using System.Data;
+﻿using System;
 using System.Configuration;
-using MySql.Data.MySqlClient;
-using System;
-using System.Data;
-using System.Configuration;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace 书店销售管理系统.DBConnector
@@ -56,17 +45,15 @@ namespace 书店销售管理系统.DBConnector
             return uniqueInstance;
         }
 
-
-                private static MySqlConnection adoCon = new MySqlConnection(ConStr);
+        public static string Constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+        private static MySqlConnection mysqlCon = new MySqlConnection(Constr);
 
         public bool TestConn(string name, string user, string pwd)
         {
             try
             {
-                ConStr = "Data Source=localhost,1433;database=" + name + ";User id=" + user + "; PWD=" + pwd;
-                MySqlConnection TestADOConn = new MySqlConnection(ConStr);
-                TestADOConn.Open();
-                TestADOConn.Close();
+                mysqlCon.Open();
+                mysqlCon.Close();
                 return true;
             }
             catch (Exception ex)
