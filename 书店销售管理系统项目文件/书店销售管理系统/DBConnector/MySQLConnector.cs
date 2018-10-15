@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -63,5 +64,66 @@ namespace 书店销售管理系统.DBConnector
             }
         }
 
+        public int Insert(string sql)
+        {
+            int affected_row = 0;
+            try
+            {
+                mysqlCon.Open();
+                MySqlCommand MyCommand = new MySqlCommand(sql, mysqlCon);
+                affected_row += MyCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                mysqlCon.Close();
+            }
+            return affected_row;
+        }
+
+        public DataSet Select(string sql)
+        {
+            try
+            {
+                mysqlCon.Open();
+                MySqlDataAdapter odbcAdapter = new MySqlDataAdapter(sql, mysqlCon);
+                DataSet ds = new DataSet();
+
+                odbcAdapter.Fill(ds);
+                return ds;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                mysqlCon.Close();
+            }
+            return null;
+        }
+
+        public int Update(string sql)
+        {
+            int affected_row = 0;
+            try
+            {
+                mysqlCon.Open();
+                MySqlCommand MyCommand = new MySqlCommand(sql, mysqlCon);
+                affected_row += MyCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                mysqlCon.Close();
+            }
+            return affected_row;
+        }
     }
 }

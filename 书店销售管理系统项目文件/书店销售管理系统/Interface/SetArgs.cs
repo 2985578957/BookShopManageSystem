@@ -9,11 +9,11 @@ namespace 书店销售管理系统.Interface
         public SetArgs()
         {
             InitializeComponent();
-            Connector.MODE = 0;
+            //Connector.MODE = 0;
         }
 
         private void submit_btn_Click(object sender, EventArgs e)
-        {
+        {/*
             String name = name_textbox.Text.Trim();
             String user = user_textbox.Text.Trim();
             String pwd = pwd_textbox.Text.Trim();
@@ -51,20 +51,22 @@ namespace 书店销售管理系统.Interface
                     pwd_textbox.Text = "";
                 }
             }
+            */
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
+        {/*
             label1.Text = "ODBC数据源名称：";
             label4.Text = "默认值：BookShop2";
-            Connector.MODE = 0;
+            Connector.MODE = 0;*/
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
+        {/*
             label1.Text = "数据库名称：";
             label4.Text = "默认值：BookShop";
             Connector.MODE = 1;
+            */
         }
     }
 }

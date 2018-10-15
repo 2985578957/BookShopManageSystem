@@ -3,7 +3,7 @@ using System.Data;
 
 namespace 书店销售管理系统.DBConnector
 {
-    class Connector
+    class ConnectorBak
     {
         private static int mode;
 
